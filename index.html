@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/favico.ico" type="image/x-icon">
+    <title>Boolean Corp</title>
+</head>
+<body>
+    <header>
+      <div class="container-fluid bg-primary bg-gradient ">
+        <div class="row d-flex justify-items-center align-items-center border border-dark border-bottom border-3 ">
+          <div class="col-2">
+            <a href="#"><img src="./assets/img/logo2.png" class="img-fluid py-2 myc_borderrad1 myc_boolog" alt="Boolean Corp logo">            </a>           
+          </div>
+          <div class="col-8">
+            <h1 class="text-uppercase text-center display-6 text-white fw-bold">Calcola il prezzo del tuo biglietto</h1>
+          </div>
+          <div class="col-2">
+            <a href="#"><img src="./assets/img/logo2.png" class="img-fluid py-2 myc_borderrad1 myc_boolog" alt="Boolean Corp logo">            </a>           
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      
+      <section>
+        <div class="container-sm my-5 myc_boxshad1 myc_borderrad0 myc_borderrad0_1">
+          <div class="d-flex row pt-5 px-5 bg-light text-white py-1 myc_borderrad0">
+            <div class="col text-primary text-center">
+            <p>Nome Cognome</p>
+          </div>
+          <div class="col text-primary text-center">
+            <p>Km da percorrere</p>
+          </div>
+          <div class="col text-primary text-center">
+            <p>Fascia d'età</p>
+          </div>
+          </div>
+          <div class="d-flex row pb-5 px-5 bg-light">
+            <div class="col">
+              <input class="form-control form-control-md" type="text" placeholder="Elen Ripley" aria-label=".form-control-sm example" id="nameSur">
+            </div>
+            <div class="col">
+              <input class="form-control form-control-md" type="number" placeholder="Anni luce" aria-label=".form-control-sm example" id="kmTraveler">
+            </div>
+            <div class="col">
+              <select class="form-select" aria-label="Default select example" id="typeOfAge">
+                <option id="age1" value="1">Minorenne</option>
+                <option id="age2" value="2">Maggiorenne</option>
+                <option id="age3" value="3">Over 65</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex row pb-5 px-5 bg-light text-white mb-3 myc_borderrad0_1">
+            <div class="col-12 d-flex justify-content-center">
+              <button type="button" class="btn btn-outline-primary btn m-2 myc_bordercol1" id="btGen">Genera</button>
+               <button type="button" class="btn btn-outline-primary btn m-2 myc_bordercol1">Annulla</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="secTicket" class="d-none">
+        <div class="container-sm my-5">
+          <div class="d-flex row text-white py-1">
+            <div class="col text-center">
+            <p class="text-uppercase text-white display-6 fw-bold"> il tuo biglietto</p>
+          </div>
+          </div>
+          <div class="d-flex row py-3 py-5 bg-light myc_borderrad0 myc_borderrad0_1 myc_boxshad1 justify-content-center">
+            <div class="col-4">
+              <img src="./assets/img/Logo_Travel.png" class="img-fluid myc_borderrad1" alt="Boolean Corp logo">
+            </div>
+            <div class="col-6">
+              <div class="row-12">
+                <p class="text-dark text-uppercase fw-bold myc_fontuderline myc_fontsize0"> Dettagli di viaggio</p>
+               <div class="col bg-dark py-2 px-2 border border-1 border-secondary">
+                <span class="fs-6 fw-bold text-white" >Nome passeggero: </span>
+                <span class="fs-6 fw-bold fst-italic text-info fs-4" id="namePassen"></span>
+               </div>
+              </div>
+            <div class="col border border-1 border-secondary">
+              <div class="row">
+               <div class="col py-2 px-2">
+                <span class="text-dark fw-bold mx-2">Offerta: </span>
+                <span class="fs-6 fw-bold fst-italic text-primary" id="discForAge">Sconto</span>
+               </div>
+              </div>
+            </div>
+            <div class="col pt-3 border-top-1 border-top-0 border border-1 border-secondary">
+              <div class="row">
+                <div class="col  py-2 px-2">
+                  <span class="text-dark fw-bold mx-2">Carrozza: </span>
+                  <span class="fs-6 fw-bold fst-italic text-primary" id="carriage">00</span>
+                </div>
+              </div> 
+            </div>
+            <div class="col pt-3 border-top-1 border-top-0 border border-1 border-secondary">
+              <div class="row">
+                <div class="col py-2 px-2">
+                  <span class="text-dark fw-bold mx-2">Codice CP: </span>
+                  <span class="fs-6 fw-bold fst-italic text-primary" id="ranCPcode">00000</span>
+                </div>
+              </div>
+            </div>
+            <div class="col pt-3 border-top-1 border-top-0 border border-1 border-secondary">
+              <div class="row">
+                <div class="col py-2 px-2">
+                  <span class="text-dark fw-bold mx-2 ">Costo Biglietto: </span>
+                  <span class="fs-6 fw-bold fst-italic text-primary" id="ticketPric">0,00€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>  
+</body>
+</html>

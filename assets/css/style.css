@@ -1,0 +1,55 @@
+/* Tag Mods */
+body{
+    background: darkcyan;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Utility */
+.myc_boolog{
+    filter: opacity(0.5);
+    filter: sepia(0.3);
+    filter: invert(1);
+}
+
+.myc_borderrad0{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+.myc_borderrad0_1{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.myc_borderrad1{
+    border-radius: 20px;
+}
+
+.myc_borderrad2{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.myc_boxshad1{
+    box-shadow: 5px 5px 10px 0 black;
+}
+
+.myc_bordercol1{
+    border-color: none;
+}
+
+.myc_bordercol1:hover{
+    border-color: purple;
+}
+
+.myc_fontsize0{
+    font-size: 1.3em;
+}
+
+.myc_fontuderline{
+    text-decoration: underline;
+}
