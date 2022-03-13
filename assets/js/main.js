@@ -16,15 +16,14 @@ let discountForAge = document.getElementById("discForAge");
 
 let tPriz = document.getElementById("ticketPric");
 
-let numberRandom5 = Math.floor(Math.random()*99999) + 1;
-console.log(numberRandom5);
+let nRcpCode = Math.floor(Math.random()*99999) + 1;
 
-var numberRandom2 = Math.floor(Math.random()*99) + 1;
-console.log(numberRandom2);
+let nRcarr = Math.floor(Math.random()*99) + 1;
 
 let cpCode = document.getElementById("ranCPcode"); 
-
+        
 let carr = document.getElementById("carriage"); 
+
 
 
 /* Retrieve incoming data */
@@ -54,7 +53,9 @@ buttonGen.addEventListener("click",
         }
        
         // Displays the passenger's Random Code (CP) in HTML code
-        numberRandom5.innerHTML = cpCode;
-        numberRandom2.innerHTML = carr;
+        cpCode.innerHTML = nRcpCode;
+
+        // Displays the passenger's carriage number in HTML code
+        carr.innerHTML = nRcarr;
     } 
 )
